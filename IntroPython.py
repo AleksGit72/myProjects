@@ -2,4 +2,5 @@ first = float(input("First: "))
 second = float(input("Second: "))
 sum = first + second
 print("Sum = ", str(sum))
-print(102 % 3)
+third = float(input("Third: "))
+print(third % 3)
