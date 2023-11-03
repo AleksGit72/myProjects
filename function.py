@@ -32,6 +32,7 @@ def absolute_value(num):
         return num
     else:
         return -num
+print(absolute_value.__doc__)
 a = input("nunber1 = ")
 b = input("number2 =  ") 
 print(absolute_value(float(a)))
