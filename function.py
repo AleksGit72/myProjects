@@ -25,6 +25,7 @@ a = input("Input number a = ")
 print(cube.__doc__) # печатает сроку документации(описание) функции
 print("a^3 = ", cube(a))
     
+
 def absolute_value(num):
     """ Возвращает абсолютное значение введенного числа"""
 
