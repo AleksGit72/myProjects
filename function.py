@@ -12,8 +12,27 @@
 #   """строка документации"""
 #   операторы
 def triple(x):
-    """Функция, которая утраивает значение"""
-    return 3*float(x)
-a = input("Number a= ")
+    """Функция, которая утраивает значение вводимого аргумента"""
+    return int(x)*3
+a = input("Input number a = ")
+print(triple.__doc__) # печатает сроку документации(описание) функции
 print("3*a = ", triple(a))
+
+def cube(x):
+    """Функция, которая значение вводимого аргумента возводит в 3-ю степень"""
+    return float(x)**3
+a = input("Input number a = ")
+print(cube.__doc__) # печатает сроку документации(описание) функции
+print("a^3 = ", cube(a))
     
+def absolute_value(num):
+    """ Возвращает абсолютное значение введенного числа"""
+
+    if num >= 0:
+        return num
+    else:
+        return -num
+a = input("nunber1 = ")
+b = input("number2 =  ") 
+print(absolute_value(float(a)))
+print(absolute_value(float(b)))
