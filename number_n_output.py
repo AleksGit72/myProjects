@@ -24,16 +24,11 @@ n........  // 10**n % 10 ---> n-ная цифра
 """
 
 num = int(input())
-first_digit = num % 10
-second_digit = num // 10 % 10 
-third_digit = num // 10**2 % 10 
-forth_digit = num // 10**3 % 10
-#  print('forth_digit % 10000 =', forth_digit)
-a = str(first_digit)
-b = str(second_digit)
-c = str(third_digit)
-d = str(forth_digit)
-print('Цифра в позиции тысяч равна', d) 
-print('Цифра в позиции сотен равна', c)
-print('Цифра в позиции десятков равна', b)
-print('Цифра в позиции единиц равна', a)
+dig0 = num % 10
+dig1 = num // 10 % 10 
+dig2 = num // 10**2 % 10 
+dig3 = num // 10**3 % 10
+print('Цифра в позиции тысяч равна', str(dig3)) 
+print('Цифра в позиции сотен равна', str(dig2))
+print('Цифра в позиции десятков равна', str(dig1))
+print('Цифра в позиции единиц равна', str(dig0))
