@@ -10,8 +10,8 @@ not — логическое отрицание.
 далее выполняется логическое умножение and;
 далее выполняется логическое сложение or.
 """
-a = int(input())
-if (a % 100 != 0 and a % 4 == 0)  or a % 400 == 0:
+x1, y1, x2, y2 = int(input()), int(input()), int(input()), int(input())
+if -1 <= x2 - x1 <= 1 and -1 <= y2 - y1 <= 1:
     print('YES')
 else:
     print('NO')
