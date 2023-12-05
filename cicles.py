@@ -48,6 +48,7 @@ for i in range(1, n +1):
 n = int(input())
 total = 1
 for i in range(1, n + 1):
+    # print(i, end=" ")
     for j in range(0, i):
         print(total, end=' ')
         total += 1
