@@ -44,12 +44,24 @@ for i in range(1, n +1):
         print(i, end='')
     print()
 
-"""
+
 n = int(input())
-total = 1
 for i in range(1, n + 1):
-    # print(i, end=" ")
-    for j in range(0, i):
-        print(total, end=' ')
-        total += 1
+    for j in range(1, i + 1):
+        print(j, end='')
+    for k in range(i - 1, 0, -1):
+        print(k, end='')
     print()
+
+"""
+a, b = int(input()), int(input())
+n_max, div_max_sum = 0, 0 
+for i in range(a, b + 1):
+    div_sum = 0 
+    for j in range(1, i + 1):
+        if i % j == 0:
+            div_sum += j
+        if div_sum >= div_max_sum:
+            div_max_sum = div_sum
+            n_max = j
+print(n_max, div_max_sum)
