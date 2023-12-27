@@ -53,7 +53,7 @@ for i in range(1, n + 1):
         print(k, end='')
     print()
 
-"""
+
 # знаходження числа з максимальною сумою дільників на відрізку (a, b)
 a, b = int(input()), int(input())
 n_max, div_max_sum = 0, 0 
@@ -66,4 +66,15 @@ for i in range(a, b + 1):
             div_max_sum = div_sum
             n_max = j
 print(n_max, div_max_sum)
+
+n = int(input())
+for i in range(1, n + 1):
+    print(i, end='')
+    for j in range(1, i // 2 + 1): # максимальний дільник не більше половини числа - оптимізація коду
+        if i % j == 0:
+            print('+', end='')
+    print()
+"""
+
+
 
