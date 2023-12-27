@@ -43,10 +43,11 @@ for i in range(len(s)):
     total += int(s[i])
 print(total)
 """
-s= input()
+s, f = input(), 0
 for x in s:
     if x in '0123456789':
-        print("Цифра")
-        break
-    else:
+        f += 1
+if f > 0:
+    print("Цифра")
+else:
     print("Цифр нет")
