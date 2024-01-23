@@ -74,7 +74,31 @@ for i in range(1, n + 1):
         if i % j == 0:
             print('+', end='')
     print()
+
+x, p, s = input(), 0, 0
+for i in x:
+    if i == '+':
+        p += 1
+    elif i == '*':
+        s += 1    
+print("Символ + встречается", p, "раз")
+print("Символ * встречается", s, "раз")
+
+
+#  сколько в строке  одинаковых пар соседних символов
+s, count = input(), 0 
+for i in range (len(s) - 1):
+    if s[i] == s[i + 1]:
+        count += 1
+print(count)
+
 """
 
-
-
+s, count_gl, count_sgl = str.lower(input()), 0, 0 
+for i in range (len(s) - 1):
+    if s[i] in ('ауоыиэяюе'):
+        count_gl += 1
+    elif s[i] in ('бвгджзйклмнпрстфхцчшщ'):
+        count_sgl += 1
+print ('Количество гласных букв равно', count_gl)
+print('Количество согласных букв равно', count_sgl)
