@@ -43,11 +43,11 @@ for i in range(len(s)):
     total += int(s[i])
 print(total)
 """
-s, f = input(), 0
-for x in s:
-    if x in '0123456789':
-        f += 1
-if f > 0:
-    print("Цифра")
-else:
-    print("Цифр нет")
+x, p, s = input(), 0, 0
+for i in x:
+    if i == '+':
+        p += 1
+    elif i == '*':
+        s += 1    
+print("Символ + встречается", p, "раз")
+print("Символ * встречается", s, "раз")
