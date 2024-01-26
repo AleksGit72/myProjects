@@ -29,7 +29,7 @@ print('YES' if s==s[::-1] else 'NO')
 s = input()
 print(len(s), s*3, s[:1], s[:3], s[-3:], s[::-1], s[1:-1], sep = "\n" )
 
-"""
+
 
 # put your python code here
 #третий символ этой строки;
@@ -42,3 +42,16 @@ print(len(s), s*3, s[:1], s[:3], s[-3:], s[::-1], s[1:-1], sep = "\n" )
 #все символы строки через один в обратном порядке, начиная с последнего
 s = input()
 print(s[2], s[-2], s[:5], s[:-2], s[::2], s[1::2], s[::-1], s[::-2], sep = "\n")
+
+
+s = input()
+l = len(s)
+if len(s) % 2 == 0:
+    print(s[l // 2:] + s[:l // 2])
+else:
+    print(s[l // 2 + 1:] + s[:l // 2 + 1])
+
+"""
+s = input()
+l = len(s) // 2 + len(s) % 2
+print(s[l:] + s[:l])
