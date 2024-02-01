@@ -40,6 +40,27 @@ s, total = input(), 0
 for i in range(10):
     total += s.count(str(i))
 print(total)
-"""
+
 s = input()
 print('YES' if s.endswith(('.com', '.ru')) else 'NO')
+
+
+# выводит на экран символ, который появляется наиболее часто, если таких символов несколько, следует вывести последний по порядку символ.
+s, count, n = input(), 0, 0
+for i in s:
+    n = s.count(i)
+    if n >= count:
+        count = n
+        letter = i
+print(letter)
+
+"""
+
+s = input()
+n = s.count('f')
+if n == 1:
+    print(s.find('f'))
+elif n > 1:
+    print(s.find('f'), s.rfind('f'))
+else:
+    print('NO')
