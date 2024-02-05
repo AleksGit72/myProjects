@@ -54,7 +54,7 @@ for i in s:
         letter = i
 print(letter)
 
-"""
+
 
 s = input()
 n = s.count('f')
@@ -64,3 +64,30 @@ elif n > 1:
     print(s.find('f'), s.rfind('f'))
 else:
     print('NO')
+
+
+s = input()
+print(s[:s.find('h')] + s[s.rfind('h') + 1:])
+
+s = '    abbc    '
+print(s.isspace())
+
+
+first_name = 'Timur'
+last_name = 'Guev'
+age = 27
+profession = 'math teacher'
+affiliation = 'BeeGeek'
+print('Hello, {0} {1}. You are {2}. You are a {3}. You were a member of {4}'
+               .format(first_name, last_name, age, profession, affiliation))
+
+
+s = 'In {}, someone paid {} {} for two pizzas.'
+year, value, money = '2010', '10k', 'Bitcoin'
+print(s.format(year, value, money))
+
+"""
+year = 2010
+amount = '10K'
+currency = 'Bitcoin'
+print(f'In {year}, someone paid {amount} {currency} for two pizzas.')
