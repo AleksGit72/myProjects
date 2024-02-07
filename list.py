@@ -10,7 +10,7 @@ print(sample[-1])
 
 # вложенньіе списки
 x = [[1, 223], [245, 63, 22]]
-print(x[1][2]) # output: 22
+print(x[1][0]) # output: 245(0-й елемент підсписку 1)
 
 # срез списка
 sample = [12, 32, 21, 24, 65]
@@ -57,6 +57,53 @@ x = [23, 12, 11, 45]
 x.sort(reverse=True)
 print("выстроить все элементы списка [23, 12, 11, 45] по убыванию", x)
 
-"""
+
 
 print(list(chr(x) for x in range(97, 97 + int(input()))))
+
+
+numbers = [12.5, 3.1415, 2.718, 9.8, 1.414, 1.1618, 1.324]
+print(max(numbers) + min(numbers))
+
+
+evens = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+average = sum(evens) / len(evens)
+print(average)
+
+
+rainbow = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet']
+rainbow[3, -1] = 'Зеленый', 'Фиолетовый'
+print(rainbow)
+
+
+languages = ['Chinese', 'Spanish', 'English', 'Hindi', 'Arabic', 'Bengali', 'Portuguese', 'Russian', 'Japanese', 'Lahnda']
+languages.reverse()
+print(languages)
+
+
+languages = ['Chinese', 'Spanish', 'English', 'Hindi', 'Arabic', 'Bengali', 'Portuguese', 'Russian', 'Japanese', 'Lahnda']
+print(languages[::-1])
+
+
+
+numbers1 = [1, 2, 3]
+numbers2 = [6]
+numbers3 = [7, 8, 9, 10, 11, 12, 13]
+print(numbers1 * 2 + numbers2 * 9 + numbers3)
+
+
+
+numbers = [2, 6, 3, 14, 10, 4, 11, 16, 12, 5, 4, 16, 1, 0, 8, 16, 10, 10, 8, 5, 1, 11, 10, 10, 12, 0, 0, 6, 14, 8, 2, 12, 14, 5, 6, 12, 1, 2, 10, 14, 9, 1, 15, 1, 2, 14, 16, 6, 7, 5]
+print(len(numbers), numbers[-1], numbers[::-1], 'YES' if 5 and 17 in numbers else 'NO', numbers[1:-1], sep='\n')
+
+
+n = int(input()) # На вход программе подается натуральное число n, а затем n строк. Напишите программу, которая создает из указанных строк список и выводит его.
+ls = []
+for _ in range(n):
+    ls.append(input())
+print(ls)
+
+
+print([input() for _ in range(int(input()))]) # На вход программе подается натуральное число n, а затем n строк. Напишите программу, которая создает из указанных строк список и выводит его.
+
+"""
