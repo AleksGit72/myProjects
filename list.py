@@ -155,4 +155,15 @@ for i in range(len(lst)):
     if len(lst[i]) >= k:
         print(lst[i][k - 1], end='')
 
+
+
+k, lst = int(input()), []
+for _ in range(k):
+    lst.extend(input())
+print(lst)
+
+
+lst = []
+print([lst.extend(input()) for _ in range(int(input()))])
 """
+
