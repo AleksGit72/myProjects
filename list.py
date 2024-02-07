@@ -113,4 +113,20 @@ print([chr(i) * (i - 96) for i in range(97, 123)])
 # На вход программе подаются натуральное число n, а затем n целых чисел. Программа выводит  список, состоящий из кубов введенных чисел
 print([int(input()) ** 3 for _ in range(int(input()))]) 
 
+
+#  программа создает список, состоящий из делителей введенного числа. v1
+n = int(input())
+list = [1]
+for i in range (2, n // 2 + 1):
+    if n % i == 0:
+        list.append(i)
+list.append(n)
+print(list)
+
+#  программа создает список, состоящий из делителей введенного числа.
+n = int(input())
+print([1] + [i for i in range(2, n // 2 + 1) if n % i == 0] + [n])
+
 """
+lst = [input() for _ in range(int(input()))]
+print([int(lst[i] + lst[i + 1]) for i in range(len(lst) - 1)])
