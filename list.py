@@ -162,8 +162,45 @@ for _ in range(k):
     lst.extend(input())
 print(lst)
 
-
 lst = []
-print([lst.extend(input()) for _ in range(int(input()))])
-"""
+[lst.extend(input()) for _ in range(int(input()))]
+print(lst)
 
+print(sum([list(input()) for _ in range(int(input()))], []))
+
+
+# На вход программе подаются натуральное число n, а затем n целых чисел. 
+# Программа удаляет наименьшее и наибольшее значение из указанных чисел, а затем выводит оставшиеся числа каждое на отдельной строке, не меняя их порядок.
+lst = [int(input()) for _ in range(int(input()))]
+lst.remove(min(lst))
+lst.remove(max(lst))
+print(*lst, sep='\n')
+
+
+# На вход программе подаются натуральное число n, а затем n целых чисел. 
+# Программа удаляет наименьшее и наибольшее значение из указанных чисел, а затем выводит оставшиеся числа каждое на отдельной строке, не меняя их порядок.
+lst = [int(input()) for _ in range(int(input()))]
+print(*[i for i in lst if i != max(lst) and i != min(lst)], sep = '\n')
+
+
+# На вход программе подаются натуральное число n, а затем n целых строк.
+# Программа выводит только уникальные строки, в том же порядке, в котором они были введены.
+lst, out= [input() for _ in range(int(input()))], []
+[out.append(i) for i in lst if i not in out]
+print(*out, sep='\n')
+
+# На вход программе подаются натуральное число n, а затем n целых строк.
+# Программа выводит только уникальные строки, в том же порядке, в котором они были введены.
+lst = [input() for _ in range(int(input()))]
+print(*[lst[i] for i in range(len(lst)) if lst[:i].count(lst[i]) == 0], sep="\n")
+
+
+# На вход программе подаются натуральное число строк n, затем сами строки в указанном количестве, затем один поисковый запрос.
+# Программа выводит все введенные строки в неизменном виде(!!!), в которых встречается поисковый запрос. 
+# Важно(!!!). Поиск не должен быть чувствителен к регистру.
+lst, ref = [input() for _ in range(int(input()))], input().lower()
+print(*[x for x in lst if ref in x.lower()], sep="\n")
+
+"""
+lst, ref = [input() for _ in range(int(input()))], [input().lower() for _ in range(int(input()))]
+print(lst, ref, sep='\n')
