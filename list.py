@@ -236,7 +236,15 @@ print(*[b for b in lst if b < 0], sep='\n')
 print(*[b for b in lst if b == 0], sep='\n')
 print(*[b for b in lst if b > 0], sep='\n')
 
-"""
+
 numbers = '192.168.1.24'
-numbers = numbers.split('.')
+numbers = numbers.split()
 print(numbers)
+
+print(*(input().split()), sep='\n')
+"""
+lst = input().split()
+# print(*[lst[i][0] for i in range(len(lst))], sep='.', end='.')
+
+print('.'.join([el[0] for el in lst]), end='.')
+print('.'.join([el[0] for el in input().split()]), end='.')
