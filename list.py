@@ -201,6 +201,42 @@ print(*[lst[i] for i in range(len(lst)) if lst[:i].count(lst[i]) == 0], sep="\n"
 lst, ref = [input() for _ in range(int(input()))], input().lower()
 print(*[x for x in lst if ref in x.lower()], sep="\n")
 
-"""
+# https://stepik.org/lesson/328948/step/7?unit=312239б через break
+# На вход программе подаются натуральное число строк n, затем сами строки в указанном количестве, затем число строк k поисковых запросов, затем сами поисковые строки в указанном количестве .
+# Программа выводит все введенные строки в неизменном виде(!!!), в которых встречается одновременно все(!!!) поисковые запросы.. 
+# Важно(!!!). Поиск не должен быть чувствителен к регистру.
 lst, ref = [input() for _ in range(int(input()))], [input().lower() for _ in range(int(input()))]
-print(lst, ref, sep='\n')
+for x in lst:
+    for y in ref:
+        if y not in x.lower():
+            break
+    else:
+        print(x)
+
+# https://stepik.org/lesson/328948/step/7?unit=312239 , через count
+# На вход программе подаются натуральное число строк n, затем сами строки в указанном количестве, затем число строк k поисковых запросов, затем сами поисковые строки в указанном количестве .
+# Программа выводит все введенные строки в неизменном виде(!!!), в которых встречается одновременно все(!!!) поисковые запросы.. 
+# Важно(!!!). Поиск не должен быть чувствителен к регистру.
+
+lst, ref = [input() for _ in range(int(input()))], [input().lower() for _ in range(int(input()))]
+for x in lst:
+    count = 0
+    for y in ref:
+        if y in x.lower():
+            count +=1
+    if count == len(ref):
+        print(x)
+
+
+# На вход программе подаются натуральное число n, а затем n целых чисел. 
+# Программа выводит сначала все отрицательные числа, затем нули, а затем все положительные числа, каждое на отдельной строке. 
+# Числа должны быть выведены в том же порядке, в котором они были введены.
+lst = [int(input()) for _ in range(int(input()))]
+print(*[b for b in lst if b < 0], sep='\n')
+print(*[b for b in lst if b == 0], sep='\n')
+print(*[b for b in lst if b > 0], sep='\n')
+
+"""
+numbers = '192.168.1.24'
+numbers = numbers.split('.')
+print(numbers)
