@@ -289,7 +289,7 @@ print(sep.join(lst1))
 # На вход программе подается строка текста и строка-разделитель.
 # Программа вставляет указанный разделитель между каждым символом введенной строки текста.
 print(*list(input()),sep=(input()))
-"""
+
 
 # На вход программе подается строка текста, содержащая целые числа.
 # Программа подсчитывает, сколько в полученном списке пар элементов, равных друг другу.
@@ -300,3 +300,19 @@ for i in range(len(lst)):
         if lst[b] == lst[i]:
             count += 1
 print(count)
+
+
+numbers = [8, 9, 10, 11]
+numbers[1] = 17
+numbers.extend([4, 5, 6])
+numbers.pop(0)
+numbers.extend(numbers)
+numbers.insert(3, 25)
+print(numbers)
+"""
+lst = input()
+ind_min = lst.index(min(lst))
+ind_max = lst.index(max(lst))
+#lst[ind_min], lst[ind_max] = lst[ind_max], lst[ind_min]
+#print(*lst)
+print(ind_min, ind_max)
