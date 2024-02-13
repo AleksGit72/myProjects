@@ -310,9 +310,7 @@ numbers.extend(numbers)
 numbers.insert(3, 25)
 print(numbers)
 """
-lst = input()
-ind_min = lst.index(min(lst))
-ind_max = lst.index(max(lst))
-#lst[ind_min], lst[ind_max] = lst[ind_max], lst[ind_min]
-#print(*lst)
-print(ind_min, ind_max)
+lst = input().split()
+ind_min, ind_max = lst.index(min(lst)), lst.index(max(lst))
+lst[ind_min], lst[ind_max] = lst[ind_max], lst[ind_min]
+print(*lst)
