@@ -319,4 +319,19 @@ i_min, i_max = lst.index(min(lst)), lst.index(max(lst))
 lst[i_min], lst[i_max] = lst[i_max], lst[i_min]
 print(*lst)
 
+
+# На вход программе подается строка, содержащая английский текст.
+# Программа  подсчитывает общее количество артиклей: 'a', 'an', 'the' без учета регистра(!!!)
+lst = input().lower().split()
+print('Общее количество артиклей:', lst.count('a') + lst.count('an') + lst.count('the'))
+
 """
+n, text = input(), []
+n=int(n[1:])
+for x in range(n) :
+    x = input()
+    if '#' in x:
+        x = x[:x.find('#')]
+        x = x.rstrip()
+    text.append(x)
+print(*text, sep="\n")
