@@ -309,10 +309,14 @@ numbers.pop(0)
 numbers.extend(numbers)
 numbers.insert(3, 25)
 print(numbers)
-"""
-lst = input().split()
-# print(lst)
-ind_min, ind_max = lst.index(min(lst)), lst.index(max(lst))
-lst[ind_min], lst[ind_max] = lst[ind_max], lst[ind_min]
-# print(lst)
+
+
+# На вход программе подается строка текста, содержащая различные(!!!) натуральные числа.
+# Из данной строки формируется список чисел
+# Программа  меняет местами минимальный и максимальный элемент этого списка.
+lst = [int (x) for x in input().split()] # str-->int !!!
+i_min, i_max = lst.index(min(lst)), lst.index(max(lst))
+lst[i_min], lst[i_max] = lst[i_max], lst[i_min]
 print(*lst)
+
+"""
