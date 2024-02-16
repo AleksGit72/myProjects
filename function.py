@@ -77,15 +77,15 @@ print_fio(input().upper(), input().upper(), input().upper())
 
 
 def print_digit_sum(num):
-    '''
+    """
     Функция print_digit_sum()
     Принимает одно целое число и выводит на печать сумму его цифр.
-    '''
+    """
     lst = [int(i) for i  in str(num)]
     print(sum(lst))
 
 print(print_digit_sum.__doc__)
 print_digit_sum(int(input('Введите число: ')))
 
-'''
 
+'''
