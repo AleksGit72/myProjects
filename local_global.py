@@ -7,13 +7,26 @@ sample_local()
 
 # Пример глобальной переменной
 example = "This is a trail" # глобальная переменная
-def sample():
-    print(example)
+def first_sample():
+    print(example) # Обращение из функции first_sample()
 def second_sample():
-    # Обращение из другой функции
-    print(example)
-sample()
+    print(example) # Обращение из функции second_sample()
+first_sample()
 second_sample()
 
 '''
+def print_paris(): 
+    s = 'I love Paris'
+    print(s) 
+
+def print_london():
+    s = 'I love London'
+    print(s) 
+
+s = 'I love Kharkiv'
+print_paris()
+print_london()
+print(s)
+
+
 

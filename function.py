@@ -88,4 +88,63 @@ print(print_digit_sum.__doc__)
 print_digit_sum(int(input('Введите число: ')))
 
 
+
+
+def convert_to_miles(km):
+    """
+    Функция принимает в качестве аргумента расстояние в километрах и возвращает расстояние в милях.
+    """
+    return km * 0.6214
+
+print(convert_to_miles.__doc__)
+print(convert_to_miles(float(input())))
+
+
+
+
+def get_days(month):  # объявление функции
+    """
+    Функция принимает в качестве аргумента номер месяца и возвращает количество дней в данном месяце.
+    Гарантируется, что передаваемый аргумент находится в диапазоне от 1 до 12.
+    Гарантируется, что что год является невисокосным.
+    """
+    if month == 2: return 28
+    elif month in [4, 6, 9, 11]: return 30
+    else: return 31
+
+print(get_days.__doc__)   
+print('В месяце', get_days(int(input('Введите номер месяца невисокосного года: '))), 'дней.')  # вызываем функцию
+
+
+
+def get_factors(num):
+    """
+    Функция принимает в качестве аргумента натуральное число и возвращает список всех делителей данного числа.
+    """
+    return [i for i in range(1, num // 2 + 1) if num % i == 0] + [num]
+
+print(get_factors.__doc__)
+print('Cписок всех делителей данного числа:', get_factors(int(input('Введите целое число: '))))
+
+
+
+def number_of_factors(num):
+    """
+    Функция принимает два аргумента: строку target и символ symbol и возвращает список, содержащий все местоположения этого символа в строке.
+    """
+    return len([i for i in range(1, num // 2 + 1) if num % i == 0] + [num])
+    
+print(number_of_factors.__doc__)
+print('Количество всех делителей данного числа:', number_of_factors(int(input('Введите целое число: '))))
+
 '''
+
+
+def find_all(target, symbol):
+    """  
+    Функция find_all(target, symbol) принимает два аргумента: строку target и символ symbol и возвращает список, содержащий все местоположения этого символа в строке.
+    Если указанный символ не встречается в строке, то возвращается пустой список.
+    """
+    return [i for i in range(len(target)) if target[i] == symbol]
+print(find_all.__doc__)
+print('Cписок, содержащий все местоположения  символа "symbol" в строке "target": ', find_all(input('Введите строку "target": '), input('Введите символ "symbol": ')))
