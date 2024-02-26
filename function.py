@@ -244,10 +244,15 @@ print(is_prime.__doc__)
 print('Число является простым? ', is_prime(int(input('Введите целое число: '))))
 
 '''
-
-# объявление функции
-def get_next_prime(num):
-    while 
+def is_prime(num):
+    return len([_ for _ in range(1, num // 2 + 1) if num % _ == 0]) + 1 == 2
   
+def get_next_prime(num):
+    num += 1
+    while True:
+        if is_prime(num):
+            return num
+        else:
+            num += 1
 
 print(get_next_prime(int(input())))
