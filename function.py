@@ -137,7 +137,7 @@ def number_of_factors(num):
 print(number_of_factors.__doc__)
 print('Количество всех делителей данного числа:', number_of_factors(int(input('Введите целое число: '))))
 
-'''
+
 
 
 def find_all(target, symbol):
@@ -148,3 +148,106 @@ def find_all(target, symbol):
     return [i for i in range(len(target)) if target[i] == symbol]
 print(find_all.__doc__)
 print('Cписок, содержащий все местоположения  символа "symbol" в строке "target": ', find_all(input('Введите строку "target": '), input('Введите символ "symbol": ')))
+
+
+
+
+def merge(list1, list2):
+    """
+    Функция принимает в качестве аргументов два отсортированных по возрастанию списка, состоящих из целых чисел, и объединяет их в один отсортированный список.
+    """
+    list1.extend(list2)
+    list1.sort()
+    return list1
+print(merge.__doc__)
+print('Объединненный отсортированный список: ', merge([int(c) for c in input('Введите список 1: ').split()], [int(c) for c in input('Введите список2: ').split()]))
+
+
+
+
+def quick_merge(list1, list2):
+    """
+    Merge lists 2
+    На вход программе подается натуральное число n, а затем n строк, содержащих целые числа в порядке возрастания, разделенные символом пробела.
+    Программа объединяет указанные списки в один отсортированный список с помощью функции quick_merge() и выводит элементы окончательного списка каждое через пробел.
+    Функция быстрого слияния quick_merge() : https://stepik.org/lesson/331754/step/12?unit=315133
+    """
+    result = []
+    p1 = 0  # указатель на первый элемент списка list1
+    p2 = 0  # указатель на первый элемент списка list2
+    while p1 < len(list1) and p2 < len(list2):  # пока не закончились оба списка
+        if list1[p1] <= list2[p2]:
+            result.append(list1[p1])
+            p1 += 1
+        else:
+            result.append(list2[p2])
+            p2 += 1
+    if p1 < len(list1):   # прицепление остатка
+        result += list1[p1:]
+    else:                 # иначе прицепляем остаток другого списка
+        result += list2[p2:]
+    return result
+
+total_list = []
+for i in range(int(input('Введите количество списков для сортировки: '))):
+    num = [int(j) for j in input('Введите список для сортировки: ').split()]
+    total_list = quick_merge(total_list, num)
+
+print(quick_merge.__doc__)
+print('Объединненный отсортированный список: ', *total_list)
+
+
+
+def is_valid_triangle(a, b, c):
+    """
+    Функция: Is Valid Triangle?
+    На вход функции подается три натуральных числа, после возвращается True если существует невырожденный треугольник со сторонами а, b, с и False в противном случае.
+    """
+    return (a + b) > c and (a + c) > b and (b + c) > a
+
+print(is_valid_triangle.__doc__, 'Введите стороны треугольника:', sep='\n')  
+print('Данный треугольник невырожденный: ', is_valid_triangle(int(input('side1 = ')), int(input('side2 = ')), int(input('side3 = '))))
+
+
+
+
+
+def is_prime(num):
+    """
+    Функция: Is a Number Prime?
+    На вход функции подается в качестве аргумента натуральное число и возвращается значение True если число является простым и False в противном случае.
+    """
+
+    counter = 0
+    for i in range(1, num // 2 + 1):
+        if counter >= 2:
+            break        
+        if num % i == 0:
+            counter += 1
+    counter += 1
+    return counter == 2 
+        
+print(is_prime.__doc__)
+print('Число является простым? ', is_prime(int(input('Введите целое число: '))))
+
+
+
+
+def is_prime(num):
+    """
+    Функция: Is a Number Prime?
+    На вход функции подается в качестве аргумента натуральное число и возвращается значение True если число является простым  и False в противном случае.
+    """
+    return len([_ for _ in range(1, num // 2 + 1) if num % _ == 0]) + 1 == 2
+        
+print(is_prime.__doc__)
+print('Число является простым? ', is_prime(int(input('Введите целое число: '))))
+
+'''
+
+# объявление функции
+def get_next_prime(num):
+    while 
+  
+
+print(get_next_prime(int(input())))
