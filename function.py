@@ -381,7 +381,7 @@ def is_valid_password(password):
     число c – должно быть четным.  
 
     """
-    return is_palindrome(password[0]) and is_prime(int(password[1])) and int(password[2]) % 2 == 0 and len(password) == 3
+    return len(password) == 3 and is_palindrome(password[0]) and is_prime(int(password[1])) and int(password[2]) % 2 == 0
 
 def is_palindrome(text):  # вспомогательная функция (проверка на палиндром)
     text = "".join(i.lower() for i in text if i.isdigit())
