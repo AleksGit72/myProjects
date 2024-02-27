@@ -217,7 +217,6 @@ def is_prime(num):
     Функция: Is a Number Prime?
     На вход функции подается в качестве аргумента натуральное число и возвращается значение True если число является простым и False в противном случае.
     """
-
     counter = 0
     for i in range(1, num // 2 + 1):
         if counter >= 2:
@@ -243,16 +242,157 @@ def is_prime(num):
 print(is_prime.__doc__)
 print('Число является простым? ', is_prime(int(input('Введите целое число: '))))
 
-'''
+
+
+
 def is_prime(num):
+    """
+    Функция: is_prime(num)
+    На вход функции подается в качестве аргумента натуральное число и возвращается значение True если число является простым  и False в противном случае.
+    """
     return len([_ for _ in range(1, num // 2 + 1) if num % _ == 0]) + 1 == 2
-  
 def get_next_prime(num):
+    """
+    Функция: get_next_prime(num)
+    На вход функции подается в качестве аргумента натуральное число и возвращается первое простое число большее числа num.
+    """
+
     num += 1
     while True:
         if is_prime(num):
             return num
         else:
             num += 1
+print(get_next_prime.__doc__)
+print('Первое простое число большее введенного числа: ', get_next_prime(int(input('Введите целое число: '))))
 
-print(get_next_prime(int(input())))
+
+
+def is_prime(num):
+    """
+    Функция: is_prime(num)
+    На вход функции подается в качестве аргумента натуральное число и возвращается значение True если число является простым  и False в противном случае.
+    """
+    return len([_ for _ in range(1, num // 2 + 1) if num % _ == 0]) + 1 == 2
+def get_next_prime(num):
+    """
+    Функция: get_next_prime(num)
+    На вход функции подается в качестве аргумента натуральное число и возвращается первое простое число большее числа num.
+    """
+
+    num += 1
+    while not is_prime(num):
+        num += 1
+    return num
+
+print(get_next_prime.__doc__)
+print('Первое простое число большее введенного числа:', get_next_prime(int(input('Введите целое число: '))))
+
+
+
+
+
+
+
+def is_password_good(password):
+    """
+    Функция: is_password_good(password)
+    На вход функции подается в качестве аргумента строковое значение пароля password и возвращает значение True, если пароль является надежным и False - в противном случае.
+    Пароль является надежным если:
+        его длина не менее 8 символов;
+        он содержит как минимум одну заглавную букву (верхний регистр);
+        он содержит как минимум одну строчную букву (нижний регистр);
+        он содержит хотя бы одну цифру.
+    """
+
+    return  len(password) >= 8 and not password.isalpha() and not password.isdigit() and not password.isupper() and not password.islower()  and password.isalnum() 
+
+print(is_password_good.__doc__)
+print('Пароль надежен:', is_password_good(input('Введите "password" на проверку:')))
+
+
+
+def is_one_away(word1, word2):
+    """
+    Функция: one_away(word1, word2)
+    На вход функции подается в качестве аргументов два слова word1 и word2 
+    и возвращается значение True, если слова имеют одинаковую длину и отличаются ровно в одном символе и False в противном случае.
+    """
+    count = 0
+    if len(word1) == len(word2):
+        for i in range(len(word1)):
+            if word1[i] != word2[i]:
+                count += 1
+    return count == 1
+
+print(is_one_away.__doc__)   
+print('Cлова имеют одинаковую длину и отличаются ровно в одном символе:', is_one_away(input('Введите word1 на проверку:'), input('Введите word2 на проверку:')))
+
+
+
+def is_one_away(word1, word2):
+    """
+    Функция: one_away(word1, word2)
+    На вход функции подается в качестве аргументов два слова word1 и word2 
+    и возвращается значение True, если слова имеют одинаковую длину и отличаются ровно в одном символе и False в противном случае.
+    """
+    if len(word1) != len(word2):
+        return False
+    else:
+        count = 0
+        for i in range(len(word1)):
+            if word1[i] != word2[i]:
+                count += 1
+    if count == 1: return True
+    else: return False
+
+print(is_one_away.__doc__)   
+print('Cлова имеют одинаковую длину и отличаются ровно в одном символе:', is_one_away(input('Введите word1 на проверку: '), input('Введите word2 на проверку: ')))
+
+
+
+
+
+def is_palindrome(text):
+    """
+    Функция: is_palindrome(text)
+    На вход функции подается в качестве аргумента строкf text и возвращается значение True если указанный текст является палиндромом и False в противном случае.
+    Примечание 1. Палиндром – это строка, которая читается одинаково в обоих направлениях
+    Примечание 2. При проверке считается что большие и маленькие буквы одинаковые, а также игнорируются пробелы и символы , . ! ? -.
+
+    """
+    text = "".join(i.lower() for i in text if i.isalpha())
+    return text == text[::-1]
+
+print(is_palindrome.__doc__)
+print('Текст является палиндромом:', is_palindrome(input('Введите text на проверку: ')))
+
+'''
+
+
+def is_valid_password(password):
+    """
+    Функция is_valid_password(password) принимает в качестве аргумента строковое значение пароля password и возвращает значение True,
+    если пароль является действительным паролем BEEGEEK банка и False - в противном случае.
+
+    Действительный пароль BEEGEEK банка имеет вид a:b:c, где a, b и c – натуральные числа.
+    число a – должно быть палиндромом;
+    число b – должно быть простым;
+    число c – должно быть четным.  
+
+    """
+    return is_palindrome(password[0]) and is_prime(int(password[1])) and int(password[2]) % 2 == 0 and len(password) == 3
+
+def is_palindrome(text):  # вспомогательная функция (проверка на палиндром)
+    text = "".join(i.lower() for i in text if i.isdigit())
+    return text == text[::-1]
+
+def is_prime(num):  # вспомогательная функция (проверка на простое число)
+    """
+    На вход функции подается в качестве аргумента натуральное число и возвращается значение True если число является простым  и False в противном случае.
+    """
+    return len([_ for _ in range(1, num // 2 + 1) if num % _ == 0]) + 1 == 2
+
+print(is_valid_password(input().split(':')))
+
+
