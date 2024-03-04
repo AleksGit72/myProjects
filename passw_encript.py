@@ -414,6 +414,7 @@ def run_password_generator():
                     continue
                 else:
                     str_password += passwords[i] + "    "
+                    str_length_mem = len(str_password)
 
             str_password += " " * (str_length_mem - len(str_password))
             print(str_password.center(console_width))
