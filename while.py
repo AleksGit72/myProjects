@@ -43,24 +43,15 @@ for i in range(len(s)):
     total += int(s[i])
 print(total)
 
-x, p, s = input(), 0, 0
-for i in x:
-    if i == '+':
-        p += 1
-    elif i == '*':
-        s += 1    
-print("Символ + встречается", p, "раз")
-print("Символ * встречается", s, "раз")
 
 """
-x = input()
+
+x, p, s = input(), 0, 0
 for i in x:
-    if i == '+':
+    if i == "+":
         p += 1
-    elif i == '*':
-        s += 1    
+    elif i == "*":
+        s += 1
 print("Символ + встречается", p, "раз")
 print("Символ * встречается", s, "раз")
-
-
-
+print(x)
