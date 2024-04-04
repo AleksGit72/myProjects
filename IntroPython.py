@@ -422,3 +422,7 @@ for i in range(1, n + 1):
         lst.append(s[j:j + i])
 print(lst)
 """
+n, res = int(input()), 0
+for _ in range(n):
+    res += int(input())
+print(res)
