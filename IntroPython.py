@@ -421,8 +421,12 @@ for i in range(1, n + 1):
     for j in range(n - i + 1):
         lst.append(s[j:j + i])
 print(lst)
-"""
+
 n, res = int(input()), 0
 for _ in range(n):
     res += int(input())
 print(res)
+"""
+import math
+fun = lambda x : 1 if x == 1 else math.ceil(math.sinh(fun (x-1)))
+print(fun(5))
