@@ -38,4 +38,4 @@ print(*lst, '', *([(i + 1) ** 2 for i in lst]), sep='\n')
 
 """
 lst = [int(input()) for _ in range(int(input()))]
-print(*lst, '', [(i + 1) ** 2 for i in lst], sep='\n')
+print(*lst, '', *[(i + 1) ** 2 for i in lst], sep='\n')

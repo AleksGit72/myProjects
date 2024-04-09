@@ -564,11 +564,10 @@ print(double(int(input())))
 
 '''
 # Шифр Цезаря
-
 def cezar(text, n, lang):
     x = ''
-    if lang == 'rus':  num_letters, low_letter, up_letter = 32, 'а', 'А'
-    elif lang == 'eng':  num_letters, low_letter, up_letter = 26, 'a', 'A'
+    if lang == 'rus': num_letters, low_letter, up_letter = 32, 'а', 'А'
+    elif lang == 'eng': num_letters, low_letter, up_letter = 26, 'a', 'A'
     for i in text:
         if i.islower(): 
             if i.isalpha(): x += chr(ord(low_letter) + (ord(i) - ord(low_letter) + num_letters + n) % num_letters)

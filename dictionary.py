@@ -19,15 +19,15 @@ my_dict = {'имя': 'Джон', 1: [2, 4, 3]}
 print("словарь с ключами разных типов ", my_dict)
 
 # используем dict()
-my_dict = dict({1:'яблоко', 2:'мяч'})
+my_dict = dict({1: 'яблоко', 2: 'мяч'})
 print("используем dict() ", my_dict)
 
 # словарь из последовательности, где элементы являются парами
-my_dict = dict([(1,'яблоко'), (2,'мяч')])
+my_dict = dict([(1, 'яблоко'), (2, 'мяч')])
 print("словарь из последовательности, где элементы являются парами ", my_dict)
 
 # вложенныe словари, то есть словари, которые являются элементами других словарей:
-capitals = {'USA': 'Washington', 'Russia':'Moscow', 'China': 'Beijing', 'Australia': {'Australia': 'Canberra', 'New_Zealand': 'Wellington'}}
+capitals = {'USA': 'Washington', 'Russia': 'Moscow', 'China': 'Beijing', 'Australia': {'Australia': 'Canberra', 'New_Zealand': 'Wellington'}}
 print("вложенныe словари ", capitals)
 
 # get vs. [] для получения элементов

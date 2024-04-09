@@ -371,7 +371,7 @@ print(*[int(x) ** 3 for x in input().split()])
 
 print(*[int(x) ** 2 for x in input().split() if int(x) % 2 == 0 and int(x) ** 2 % 10 != 4])
 
-
+"""
 from time import time  # импортируем функцию тайм из модуля тайм
 # она возвращает время с начала эпохи (какой то компьютерной)
 start = time()  # запоминаем время в начале работы нашей программы
@@ -384,8 +384,3 @@ for _ in range(n):
     a.remove(c)
 print(b)
 print(time() - start)  # смотрим сколько времени прошло
-
-
-"""
-
-
