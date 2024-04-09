@@ -94,11 +94,11 @@ print(count)
 
 """
 
-s, count_gl, count_sgl = str.lower(input()), 0, 0 
-for i in range (len(s) - 1):
-    if s[i] in ('ауоыиэяюе'):
-        count_gl += 1
-    elif s[i] in ('бвгджзйклмнпрстфхцчшщ'):
-        count_sgl += 1
-print ('Количество гласных букв равно', count_gl)
-print('Количество согласных букв равно', count_sgl)
+s, count_vow, count_cons = str.lower(input()), 0, 0
+for i in range(len(s) - 1):
+    if s[i] in 'ауоыиэяюе':
+        count_vow += 1
+    elif s[i] in 'бвгджзйклмнпрстфхцчшщ':
+        count_cons += 1
+print('Количество гласных букв равно', count_vow)
+print('Количество согласных букв равно', count_cons)
