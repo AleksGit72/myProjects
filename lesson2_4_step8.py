@@ -37,7 +37,6 @@ try:
     #  подтвердить ввод решения.
     submit_button.click()
 
-
 finally:
 
     print(browser.switch_to.alert.text.split()[-1])
