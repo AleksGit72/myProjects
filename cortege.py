@@ -27,7 +27,7 @@ print(my_tuple)
 """
 Слайсинг(сегментирование) кортежей:
 СИНТАКСИС:
-print(x[1:3], где 1-й включительно, 3-й - ИСКЛЮЧЕН!!!), 
+print(var[1:3], где 1-й включительно, 3-й - ИСКЛЮЧЕН!!!), 
 
 Data:
    c   o   d   e   c   h   i   c   k
@@ -94,6 +94,6 @@ for sample in ('Bob', 'Kat', 'Sam'):
 
 # Удалить кортеж
 x = (12, 13, 14, 15, 16)
-#   print(x)
+#   print(var)
 del x
-print(x) # ВЫВОД:NameError: name 'x' is not defined
+print(x) # ВЫВОД:NameError: name 'var' is not defined

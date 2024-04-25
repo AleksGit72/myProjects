@@ -9,8 +9,8 @@ print(sample[2] + ' is a great city')
 print(sample[-1])
 
 # вложенньіе списки
-x = [[1, 223], [245, 63, 22]]
-print(x[1][0]) # output: 245(0-й елемент підсписку 1)
+var = [[1, 223], [245, 63, 22]]
+print(var[1][0]) # output: 245(0-й елемент підсписку 1)
 
 # срез списка
 sample = [12, 32, 21, 24, 65]
@@ -30,36 +30,36 @@ del sample[2]
 print(sample) # output : [2, 3, 6, 8]
 
 # Метод index() - найти индекс элемента в списке.
-x = [32, 23, 12]
-print("индекс элемента 23 в списке [32, 23, 12]: ", x.index(23)) # output: 1
-# print("индекс элемента 55 в списке [32, 23, 12]: ", x.index(55)) # output: ValueError: 55 is not in list
+var = [32, 23, 12]
+print("индекс элемента 23 в списке [32, 23, 12]: ", var.index(23)) # output: 1
+# print("индекс элемента 55 в списке [32, 23, 12]: ", var.index(55)) # output: ValueError: 55 is not in list
 
 #Метод insert() 
 #СИНТАКСИС: имя_списка.insert(индекс, элемент)
-x = [32, 23, 12]
-x.insert(2, 11)
-print("x.insert(2, 11): елемент 11 вставлен на третью позицию списка [32, 23, 12], output: ", x)
+var = [32, 23, 12]
+var.insert(2, 11)
+print("var.insert(2, 11): елемент 11 вставлен на третью позицию списка [32, 23, 12], output: ", var)
 
 Метод sort():
 СИНТАКСИС: 
 sort()  - выстроить все элементы списка по возрастанию
 sort(reverse = True)  - выстроить все элементы списка по убыванию.
 
-x = [23, 12, 11, 45]
-x.sort()
-print("выстроить все элементы списка [23, 12, 11, 45] по возрастанию", x)
+var = [23, 12, 11, 45]
+var.sort()
+print("выстроить все элементы списка [23, 12, 11, 45] по возрастанию", var)
 
-x = ['USA', 'China', 'Russia', 'UK']
-x.sort()
-print("выстроить все элементы списка ['USA', 'China', 'Russia', 'UK'] по возрастанию",x)
+var = ['USA', 'China', 'Russia', 'UK']
+var.sort()
+print("выстроить все элементы списка ['USA', 'China', 'Russia', 'UK'] по возрастанию",var)
 
-x = [23, 12, 11, 45]
-x.sort(reverse=True)
-print("выстроить все элементы списка [23, 12, 11, 45] по убыванию", x)
+var = [23, 12, 11, 45]
+var.sort(reverse=True)
+print("выстроить все элементы списка [23, 12, 11, 45] по убыванию", var)
 
 
 
-print(list(chr(x) for x in range(97, 97 + int(input()))))
+print(list(chr(var) for var in range(97, 97 + int(input()))))
 
 
 numbers = [12.5, 3.1415, 2.718, 9.8, 1.414, 1.1618, 1.324]
@@ -199,19 +199,19 @@ print(*[lst[i] for i in range(len(lst)) if lst[:i].count(lst[i]) == 0], sep="\n"
 # Программа выводит все введенные строки в неизменном виде(!!!), в которых встречается поисковый запрос. 
 # Важно(!!!). Поиск не должен быть чувствителен к регистру.
 lst, ref = [input() for _ in range(int(input()))], input().lower()
-print(*[x for x in lst if ref in x.lower()], sep="\n")
+print(*[var for var in lst if ref in var.lower()], sep="\n")
 
 # https://stepik.org/lesson/328948/step/7?unit=312239б через break
 # На вход программе подаются натуральное число строк n, затем сами строки в указанном количестве, затем число строк k поисковых запросов, затем сами поисковые строки в указанном количестве .
 # Программа выводит все введенные строки в неизменном виде(!!!), в которых встречается одновременно все(!!!) поисковые запросы.. 
 # Важно(!!!). Поиск не должен быть чувствителен к регистру.
 lst, ref = [input() for _ in range(int(input()))], [input().lower() for _ in range(int(input()))]
-for x in lst:
+for var in lst:
     for y in ref:
-        if y not in x.lower():
+        if y not in var.lower():
             break
     else:
-        print(x)
+        print(var)
 
 # https://stepik.org/lesson/328948/step/7?unit=312239 , через count
 # На вход программе подаются натуральное число строк n, затем сами строки в указанном количестве, затем число строк k поисковых запросов, затем сами поисковые строки в указанном количестве .
@@ -219,13 +219,13 @@ for x in lst:
 # Важно(!!!). Поиск не должен быть чувствителен к регистру.
 
 lst, ref = [input() for _ in range(int(input()))], [input().lower() for _ in range(int(input()))]
-for x in lst:
+for var in lst:
     count = 0
     for y in ref:
-        if y in x.lower():
+        if y in var.lower():
             count +=1
     if count == len(ref):
-        print(x)
+        print(var)
 
 
 # На вход программе подаются натуральное число n, а затем n целых чисел. 
@@ -314,7 +314,7 @@ print(numbers)
 # На вход программе подается строка текста, содержащая различные(!!!) натуральные числа.
 # Из данной строки формируется список чисел
 # Программа  меняет местами минимальный и максимальный элемент этого списка.
-lst = [int (x) for x in input().split()] # str-->int !!!
+lst = [int (var) for var in input().split()] # str-->int !!!
 i_min, i_max = lst.index(min(lst)), lst.index(max(lst))
 lst[i_min], lst[i_max] = lst[i_max], lst[i_min]
 print(*lst)
@@ -331,12 +331,12 @@ print('Общее количество артиклей:', lst.count('a') + lst.
 # Программа выводит те же строки, но удаляет комментарии и символы пустого пространства(пробелы) в конце строк. Пустую строку вместо первой строки ввода выводить не надо(#...).
 n, text = input(), []
 n=int(n[1:])
-for x in range(n) :
-    x = input()
-    if '#' in x:
-        x = x[:x.find('#')] # срез до "#"
-        x = x.rstrip() # удаляем все пробелы справа
-    text.append(x)
+for var in range(n) :
+    var = input()
+    if '#' in var:
+        var = var[:var.find('#')] # срез до "#"
+        var = var.rstrip() # удаляем все пробелы справа
+    text.append(var)
 print(*text, sep="\n")
 
 
@@ -344,7 +344,7 @@ print(*text, sep="\n")
 # На вход программе подается строка текста, содержащая целые числа.
 # Из данной строки формируется список чисел
 # Программа сортирует и выводит данный список сначала по возрастанию, а затем по убыванию.
-lst = [int (x) for x in input().split()]
+lst = [int (var) for var in input().split()]
 lst.sort()
 print(*lst)
 lst.sort(reverse=True)
@@ -354,22 +354,22 @@ print(*lst)
 # На вход программе подается строка текста, содержащая целые числа.
 # Из данной строки формируется список чисел
 # Программа сортирует и выводит данный список сначала по возрастанию, а затем по убыванию.
-lst = [int (x) for x in input().split()]
+lst = [int (var) for var in input().split()]
 lst.sort()
 print(*lst)
 print(*lst[::-1])
 
 
 # Программа сортирует и выводит список всех целых чисел(!!!)-палиндромов от 100 до 1000 (включительно).
-print([x for x in range(100, 1001) if str(x) == str(x)[::-1]])
+print([var for var in range(100, 1001) if str(var) == str(var)[::-1]])
 
 
 # На вход программе подается строка текста, содержащая целые числа.
 # Программа, использующая списочное выражение, выводит кубы указанных чисел на одной строке.
-print(*[int(x) ** 3 for x in input().split()])
+print(*[int(var) ** 3 for var in input().split()])
 
 
-print(*[int(x) ** 2 for x in input().split() if int(x) % 2 == 0 and int(x) ** 2 % 10 != 4])
+print(*[int(var) ** 2 for var in input().split() if int(var) % 2 == 0 and int(var) ** 2 % 10 != 4])
 
 """
 from time import time  # импортируем функцию тайм из модуля тайм

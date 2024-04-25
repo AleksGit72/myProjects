@@ -75,8 +75,8 @@ for i in range(1, n + 1):
             print('+', end='')
     print()
 
-x, p, s = input(), 0, 0
-for i in x:
+var, p, s = input(), 0, 0
+for i in var:
     if i == '+':
         p += 1
     elif i == '*':

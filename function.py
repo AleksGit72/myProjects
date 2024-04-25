@@ -11,17 +11,17 @@
 #def имя_функции(аргументы):
 #   """строка документации"""
 #   операторы
-def triple(x):
+def triple(var):
     """Функция, которая утраивает значение вводимого аргумента"""
-    return int(x)*3
+    return int(var)*3
 
 a = input("Input number a = ")
 print(triple.__doc__) # печатает сроку документации(описание) функции
 print("3*a = ", triple(a))
 
-def cube(x):
+def cube(var):
     """Функция, которая значение вводимого аргумента возводит в 3-ю степень"""
-    return float(x)**3
+    return float(var)**3
 
 a = input("Input number a = ")
 print(cube.__doc__) # печатает сроку документации(описание) функции
@@ -40,11 +40,11 @@ b = input("number2 =  ")
 print(absolute_value(float(a)))
 print(absolute_value(float(b)))
 
-# На вход программе подается два числа y и x, каждое на отдельной строке.
+# На вход программе подается два числа y и var, каждое на отдельной строке.
 # Программа  выводит "пустой"(незаполненный внутри) звездный прямоугольник с размерами у(строк) на х(столбцов)
-def draw_box(y, x):
+def draw_box(y, var):
      for i in range(y):
-          print('*' * x if i == 0 or i == y - 1 else '*' + ' ' * (x - 2) + '*')
+          print('*' * var if i == 0 or i == y - 1 else '*' + ' ' * (var - 2) + '*')
 
 draw_box(int(input()), int(input()))
 
@@ -447,8 +447,8 @@ def get_middle_point(x1, y1, x2, y2):
     return (x1 + x2) / 2, (y1 + y2) / 2
 
 x1, y1, x2, y2 = (int(input()) for _ in range(4))
-x, y = get_middle_point(x1, y1, x2, y2)
-print('Решением системы являются числа', 'x =', x, 'y =', y)
+var, y = get_middle_point(x1, y1, x2, y2)
+print('Решением системы являются числа', 'var =', var, 'y =', y)
 
 
 

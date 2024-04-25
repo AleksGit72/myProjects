@@ -11,11 +11,12 @@ try:
     browser = webdriver.Chrome()
     browser.get(link)
 
-    #  Считать значение для переменной x:
-    x_element = browser.find_element('xpath', '//*[@id="input_value"]')
-    x = x_element.text
+    #  Считать значение для переменной var:
 
-    #  Посчитать математическую функцию от x
+
+    x = browser.find_element('xpath', '//*[@id="input_value"]').text
+
+    #  Посчитать математическую функцию от var
     y = calc(x)
 
     #  Ввести ответ в текстовое поле.

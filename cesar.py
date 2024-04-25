@@ -2,16 +2,16 @@
 # Шифр Цезаря
 
 def cezar(text, n, lang):
-    x = ''
+    var = ''
     if lang == 'rus':  num_letters, low_letter, up_letter = 32, 'а', 'А'
     elif lang == 'eng':  num_letters, low_letter, up_letter = 26, 'a', 'A'
     for i in text:
         if i.islower(): 
-            if i.isalpha(): x += chr(ord(low_letter) + (ord(i) - ord(low_letter) + num_letters + n) % num_letters)
+            if i.isalpha(): var += chr(ord(low_letter) + (ord(i) - ord(low_letter) + num_letters + n) % num_letters)
         elif i.isupper():
-            if i.isalpha(): x += chr(ord(up_letter) + (ord(i) - ord(up_letter) + num_letters + n) % num_letters)
-        else: x += i  
-    return x    
+            if i.isalpha(): var += chr(ord(up_letter) + (ord(i) - ord(up_letter) + num_letters + n) % num_letters)
+        else: var += i
+    return var
 
 text, n, lang = input('Введите текст: '), int(input('Введите сдвиг - целое число: ')), input('Введите обозначение языка - rus или eng: ')
 print(cezar(text, n, lang))
